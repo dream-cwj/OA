@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd" >
+<struts>
+
+	<!-- 常量设置 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	
+	<!-- 项目默认业务包，新项目必须要继承与它 -->
+	<package name="default" extends="json-default" namespace="/">
+		<!-- 登录拦截器栈 -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="loginInterceptor" />
+			<interceptor-stack name="XenonOAStack">
+				<interceptor-ref name="loginInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="XenonOAStack" />
+		<global-results>
+			<result name="login" type="redirect">gotologin</result>
+			<result name="input">/WEB-INF/pages/{1}.jsp</result>
+			<result name="result" type="json">
+				<param name="root">result</param>
+			</result>
+		</global-results>
+		<!-- 需要直接访问页面请通过以下 action 访问 -->
+		<action name="to*" class="homeAction" method="{1}">
+			<result>/WEB-INF/pages/{1}.jsp</result>
+			<interceptor-ref name="XenonOAStack" />
+		</action>
+	</package>
+	
+	<!-- Employee相关业务包 -->
+	<package name="Employee" extends="default" namespace="/">
+		<default-interceptor-ref name="defaultStack" />
+		<action name="gotologin">
+			<result>/WEB-INF/pages/login.jsp</result>
+		</action>
+		<action name="login" class="employeeAction" method="login"></action>
+		<action name="employee*" class="employeeAction" method="{1}">
+			<result name="logout" type="redirectAction">toindex</result>
+			<interceptor-ref name="XenonOAStack"></interceptor-ref>
+		</action>
+	</package>
+	
+	<!-- 通告相关业务包 -->
+	<package name="annunciate" extends="default" namespace="/">
+		<action name="annunciate*" class="annunciateAction" method="{1}">
+			<result name="list">/WEB-INF/pages/annunciate.jsp</result>
+		</action>
+	</package>
+	
+	<!-- 便签相关业务包 -->
+	<package name="note" extends="default" namespace="/">
+		<action name="note*" class="noteAction" method="{1}">
+			<result name="list">/WEB-INF/pages/note.jsp</result>
+		</action>
+	</package>
+	
+	<!-- 会议室相关业务包 -->
+	<package name="meetingRoom" extends="default" namespace="/">
+		<action name="meetingroom*" class="meetingRoomAction" method="{1}">
+			<result name="list">/WEB-INF/pages/meetingroom.jsp</result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.exnon.bean">
+	<class name="Annunciate">
+		<id name="id" column="a_id">
+			<!-- <generator class="sequence">
+				<param name="sequence">seq_annunciate</param>
+			</generator> -->
+			<generator class="identity" />
+		</id>
+		<property name="title" column="a_title" />
+		<property name="urgency" column="a_urgency" />
+		<property name="startTime" column="a_startTime" />
+		<property name="endTime" column="a_endTime" />
+		<property name="publishTime" column="a_publishTime" />
+		<many-to-one name="publisher" column="a_publisher_sn" class="Employee" />
+		<property name="content" column="a_content" />
+	</class>
+</hibernate-mapping>

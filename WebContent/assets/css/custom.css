@@ -1,0 +1,20 @@
+/**
+ *
+ * Apply your custom CSS here
+ *
+*/
+.note-write {
+	min-height: 250px;
+	font: 15px/25px "Arimo", "Helvetica Neue", Helvetica, Arial, sans-serif,
+		serif;
+	border: 1px solid #dddddd;
+	max-height: 250px;
+	overflow: hidden;
+	word-wrap: break-word;
+	resize: none;
+	border: 1px solid #dddddd;
+}
+
+.page-info{
+	line-height: 30px;
+}
