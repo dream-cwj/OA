@@ -8,32 +8,32 @@ import org.exnon.service.IAnnunciateService;
 import org.exnon.service.INoteService;
 
 public class HomeAction extends BaseAction {
-	
+
 	private IAnnunciateService annunciateService;
 	private INoteService noteService;
-	
+
 	private List<Annunciate> annunciates;
 	private List<Note> notes;
-	
-	public String index(){
-		annunciates = annunciateService.findAnnunciatesByPage(null).getData();
+
+	public String index() {
+		annunciates = annunciateService.findAnnunciates();
 		notes = noteService.findNotesByPage(null).getData();
 		return SUCCESS;
 	}
-	
-	public String page_menu(){
+
+	public String page_menu() {
 		return SUCCESS;
 	}
-	
-	public String page_modal(){
+
+	public String page_modal() {
 		return SUCCESS;
 	}
-	
-	public String page_nav(){
+
+	public String page_nav() {
 		return SUCCESS;
 	}
-	
-	public String page_footer(){
+
+	public String page_footer() {
 		return SUCCESS;
 	}
 

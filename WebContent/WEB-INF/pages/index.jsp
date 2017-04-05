@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="assets/css/xenon-skins.css">
 <link rel="stylesheet" href="assets/css/custom.css">
 <script src="assets/js/jquery-1.11.1.min.js"></script>
-<script src="assets/js/jquery-validate/jquery.validate.min.js"></script>
+<script src="assets/js/jquery-validate/jquery.validate.js"></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -273,7 +273,7 @@
 
 	<!-- Imported scripts on this page -->
 	<script src="assets/js/xenon-widgets.js"></script>
-	<script src="assets/js/devexpress-web-14.1/js/globalize.min.js"></script>
+	<script src="assets/js/devexpress-web-14.1/js/globalize.js"></script>
 	<script src="assets/js/devexpress-web-14.1/js/dx.chartjs.js"></script>
 	<script src="assets/js/toastr/toastr.min.js"></script>
 

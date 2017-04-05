@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * 通告
- * @author 陈文�?
+ * @author 陈文�?
  *
  */
 public class Annunciate {
@@ -13,7 +13,7 @@ public class Annunciate {
 	
 	private String title;
 	
-	private Boolean urgency;	//是否紧�?
+	private Boolean urgency;	//是否紧�?
 	
 	private Date startTime;
 	
@@ -21,7 +21,7 @@ public class Annunciate {
 	
 	private Date publishTime;	//发布时间
 	
-	private Employee publisher;	//发布�?
+	private Employee publisher;	//发布者
 	
 	private String content;
 

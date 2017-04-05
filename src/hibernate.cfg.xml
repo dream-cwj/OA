@@ -4,7 +4,7 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>
 		<property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
-		<property name="hibernate.connection.url">jdbc:sqlite:E:\DB\XENON.sqlite3</property>
+		<property name="hibernate.connection.url">jdbc:sqlite:F:\DB\XENON.sqlite3</property>
 		
 		<!-- <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>

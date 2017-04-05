@@ -1,5 +1,8 @@
 package org.exnon.service.impl;
 
+import java.util.Date;
+import java.util.List;
+
 import org.exnon.bean.Annunciate;
 import org.exnon.dao.IAnnunciateDao;
 import org.exnon.service.IAnnunciateService;
@@ -43,6 +46,12 @@ public class AnnunciateServiceImpl extends BaseService implements
 			return false;
 		annunciateDao.deleteAnnunciate(annunciate.getId());
 		return true;
+	}
+
+	@Override
+	public List<Annunciate> findAnnunciates() {
+		List<Annunciate> list = annunciateDao.getAnnunciates(new Date());
+		return list;
 	}
 
 }

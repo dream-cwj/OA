@@ -47,7 +47,6 @@ public class Page<T> {
 	 *            总记录数
 	 */
 	public void setCount(int count) {
-		this.count = count > 0 ? count : 1;
 		int total = (int) Math.ceil(this.count * 1d / this.pageSize);
 		this.total = total > 0 ? total : 1;
 	}

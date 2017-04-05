@@ -29,7 +29,7 @@
 <link rel="stylesheet"
 	href="assets/js/daterangepicker/daterangepicker-bs3.css">
 <script src="assets/js/jquery-1.11.1.min.js"></script>
-<script src="assets/js/jquery-validate/jquery.validate.min.js"></script>
+<script src="assets/js/jquery-validate/jquery.validate.js"></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -346,7 +346,7 @@
 							toastr.success("发布成功");
 							setTimeout(function(){
 								location.reload();
-							},3000);
+							},1000);
 						} else {
 							toastr.error("发布失败");
 						}
@@ -365,9 +365,11 @@
 				data:data,
 				success:function(resp){
 					if(resp==true){
-						alert("删除成功！");
 						$("#deleteAnnunciate").modal("hide");
-						location.reload();
+						toastr.success("删除成功");
+						setTimeout(function(){
+							location.reload();
+						},1000);
 					}else{
 						alert("删除失败！");
 					}
@@ -393,12 +395,12 @@
 	<script src="assets/js/daterangepicker/daterangepicker.js"></script>
 	<script src="assets/js/datepicker/bootstrap-datepicker.js"></script>
 	<script src="assets/js/timepicker/bootstrap-timepicker.min.js"></script>
-	<script src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="assets/js/jquery-ui/jquery-ui.js"></script>
 	<script src="assets/js/selectboxit/jquery.selectBoxIt.min.js"></script>
 	<script src="assets/js/typeahead.bundle.js"></script>
 	<script src="assets/js/handlebars.min.js"></script>
 	<script src="assets/js/xenon-widgets.js"></script>
-	<script src="assets/js/devexpress-web-14.1/js/globalize.min.js"></script>
+	<script src="assets/js/devexpress-web-14.1/js/globalize.js"></script>
 	<script src="assets/js/devexpress-web-14.1/js/dx.chartjs.js"></script>
 
 

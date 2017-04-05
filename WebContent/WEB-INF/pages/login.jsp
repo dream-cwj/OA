@@ -206,7 +206,7 @@
 	<script src="<%=basePath %>assets/js/joinable.js"></script>
 	<script src="<%=basePath %>assets/js/xenon-api.js"></script>
 	<script src="<%=basePath %>assets/js/xenon-toggles.js"></script>
-	<script src="<%=basePath %>assets/js/jquery-validate/jquery.validate.min.js"></script>
+	<script src="<%=basePath %>assets/js/jquery-validate/jquery.validate.js"></script>
 	<script src="<%=basePath %>assets/js/toastr/toastr.min.js"></script>
 
 

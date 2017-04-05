@@ -1,5 +1,7 @@
 package org.exnon.service;
 
+import java.util.List;
+
 import org.exnon.bean.Annunciate;
 import org.exnon.util.Page;
 
@@ -22,6 +24,12 @@ public interface IAnnunciateService {
 	 * @return
 	 */
 	Page<Annunciate> findAnnunciatesByPage(Page<Annunciate> page);
+	
+	/**
+	 * 获取正在通告的公告
+	 * @return
+	 */
+	List<Annunciate> findAnnunciates();
 	
 	/**
 	 * 删除通告，注：对象 id 必须存在
